@@ -1,4 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const feedElement = document.getElementById("feed");
+
+  // Add loader to the feed section
+  const loaderHTML = `
+    <div class="nes-container is-rounded is-dark" id="feed-loader">
+      <p>Loading articles...</p>
+    </div>
+  `;
+  feedElement.innerHTML = loaderHTML;
+
   getFeed();
 });
 
